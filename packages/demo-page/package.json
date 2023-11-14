@@ -1,0 +1,41 @@
+{
+  "name": "demo-page",
+  "private": true,
+  "version": "1.0.2",
+  "description": "Demo of redux wrapper for Next.js",
+  "scripts": {
+    "clean": "rimraf .next coverage",
+    "test": "playwright test",
+    "start": "next --port=4000"
+  },
+  "dependencies": {
+    "jsondiffpatch": "0.4.1",
+    "next-redux-wrapper-future": "*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.7",
+    "redux-logger": "3.0.6"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.17.1",
+    "@types/react": "17.0.37",
+    "@types/react-dom": "17.0.11",
+    "@types/react-redux": "7.1.20",
+    "@types/redux-logger": "3.0.9",
+    "next": "14.0.2",
+    "next-redux-wrapper-future-configs": "^1.0.2",
+    "playwright": "1.17.1",
+    "rimraf": "3.0.2",
+    "typescript": "4.5.2"
+  },
+  "author": "LLLLLamHo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LLLLLamHo/next-redux-wrapper-future.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LLLLLamHo/next-redux-wrapper-future/issues"
+  },
+  "homepage": "https://github.com/LLLLLamHo/next-redux-wrapper-future",
+  "license": "MIT"
+}

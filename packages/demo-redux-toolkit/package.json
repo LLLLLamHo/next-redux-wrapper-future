@@ -1,0 +1,27 @@
+{
+  "name": "demo-redux-toolkit",
+  "version": "1.0.2",
+  "private": true,
+  "scripts": {
+    "clean": "rimraf .next coverage",
+    "test": "playwright test",
+    "start": "next --port=6060"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "1.9.5",
+    "next-redux-wrapper-future": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.7"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.17.1",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@types/react-redux": "7.1.30",
+    "next": "14.0.2",
+    "next-redux-wrapper-future-configs": "^1.0.2",
+    "playwright": "1.17.1"
+  },
+  "license": "MIT"
+}

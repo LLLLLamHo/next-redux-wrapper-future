@@ -4,7 +4,7 @@ import {applyMiddleware, createStore, AnyAction} from 'redux';
 import {useSelector} from 'react-redux';
 import promiseMiddleware from 'redux-promise-middleware';
 import {createWrapper, HYDRATE} from '../src';
-import {RouterContext} from 'next/dist/shared/lib/router-context';
+import {RouterContext} from 'next/dist/shared/lib/router-context.shared-runtime';
 
 export interface State {
     reduxStatus?: string;
@@ -34,7 +34,9 @@ export const DummyComponent: React.ComponentType<any> = (props: any) => {
     return <div>{JSON.stringify({props, state})}</div>;
 };
 
-export const child = (cmp: any) => (create(cmp)?.toJSON() as any)?.children?.[0];
+export const child = (cmp: any) => {
+    return (create(cmp)?.toJSON() as any)?.children?.[0]
+};
 
 export const Router = ({asPath = '/foo', children}: any) => (
     <RouterContext.Provider value={{asPath} as any}>{children}</RouterContext.Provider>

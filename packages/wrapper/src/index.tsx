@@ -10,8 +10,8 @@ import {
     NextComponentType,
     NextPageContext,
 } from 'next';
+// import {usePathname, useSearchParams, useRouter} from 'next/navigation';
 import {useRouter} from 'next/router';
-
 /**
  * Quick note on Next.js return types:
  *
@@ -192,6 +192,7 @@ export const createWrapper = <S extends Store>(makeStore: MakeStore<S>, config: 
                 events?.off('routeChangeStart', handleStart);
             };
         }, [events]);
+
 
         // useMemo so that when we navigate client side, we always synchronously hydrate the state before the new page
         // components are mounted. This means we hydrate while the previous page components are still mounted.

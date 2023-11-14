@@ -24,7 +24,7 @@
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/react-redux": "7.1.30",
-    "@types/react-test-renderer": "17.0.1",
+    "@types/react-test-renderer": "18.0.0",
     "@types/webpack": "5.28.0",
     "concurrently": "6.4.0",
     "jest": "27.4.3",
@@ -33,7 +33,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.7",
-    "react-test-renderer": "17.0.2",
+    "react-test-renderer": "18.2.0",
     "redux": "4.1.2",
     "redux-promise-middleware": "6.1.2",
     "rimraf": "3.0.2",
@@ -45,14 +45,14 @@
     "react": "*",
     "react-redux": "*"
   },
-  "author": "Kirill Konshin",
+  "author": "LLLLLamHo",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kirill-konshin/next-redux-wrapper.git"
+    "url": "git://github.com/LLLLLamHo/next-redux-wrapper-future.git"
   },
   "bugs": {
-    "url": "https://github.com/kirill-konshin/next-redux-wrapper/issues"
+    "url": "https://github.com/LLLLLamHo/next-redux-wrapper-future/issues"
   },
-  "homepage": "https://github.com/kirill-konshin/next-redux-wrapper",
+  "homepage": "https://github.com/LLLLLamHo/next-redux-wrapper-future",
   "license": "MIT"
 }
