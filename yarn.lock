@@ -7116,6 +7116,11 @@ next-redux-wrapper-future@^1.0.2:
   resolved "https://mirrors.tencent.com/npm/next-redux-wrapper-future/-/next-redux-wrapper-future-1.0.2.tgz#ebc3c70cc4db115387bd24ecf4264152bc6cba01"
   integrity sha512-TkCK3hjhDuPb8M29bBVoBq8KGQZ2fs345LbJP/Cmnl8eFsAqbTn4hc0akr/pWdsfcyL3akOl1lAAXeJMmH7BcA==
 
+next-redux-wrapper-future@^1.1.0:
+  version "1.1.0"
+  resolved "https://mirrors.tencent.com/npm/next-redux-wrapper-future/-/next-redux-wrapper-future-1.1.0.tgz#e4445469a8cfef7e1ac6e0cb3aaa56ad47922ac5"
+  integrity sha512-4EtkvSvYU4jnsUyD+cIgRXKkeUFtMia1ymt1IWkOa4CdG9neyW2vsr1b1S63MgEO5v9Mz4TFVSdsfLjTmQ0+6g==
+
 next@14.0.2, next@^14.0.2:
   version "14.0.2"
   resolved "https://mirrors.tencent.com/npm/next/-/next-14.0.2.tgz#02ba6a1656edf14d3913c7a3553026e9d6e083c7"

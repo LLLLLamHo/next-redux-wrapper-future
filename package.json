@@ -6,10 +6,11 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "clean": "lerna run clean && lerna clean --yes && rimraf node_modules",
+    "clean": "lerna run clean && lerna clean --yes && rimraf coverage node_modules",
     "build": "lerna run build --stream",
     "test": "lerna run test --stream --concurrency=1",
     "test:quick": "lerna run test:quick --stream --concurrency=1",
+    "test:coveralls": "lerna run test:coveralls",
     "publish:release": "lerna publish --tag-version-prefix=\"\" --force-publish=* --no-push --no-git-tag-version",
     "prettier": "prettier --write --ignore-path=.eslintignore --loglevel=warn",
     "eslint": "eslint --cache --cache-location node_modules/.cache/eslint --fix",
