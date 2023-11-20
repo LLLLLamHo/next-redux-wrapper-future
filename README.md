@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/next-redux-wrapper-future.svg)](https://www.npmjs.com/package/next-redux-wrapper-future)
 ![NPM](https://img.shields.io/npm/l/next-redux-wrapper-future)
+[![Coverage Status](https://coveralls.io/repos/github/LLLLLamHo/next-redux-wrapper-future/badge.svg?branch=main)](https://coveralls.io/github/LLLLLamHo/next-redux-wrapper-future?branch=main)
 ![Build status](https://img.shields.io/github/actions/workflow/status/LLLLLamHo/next-redux-wrapper-future/node.yml)
 ![npm](https://img.shields.io/npm/dy/next-redux-wrapper-future)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/next-redux-wrapper-future)
