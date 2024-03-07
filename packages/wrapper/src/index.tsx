@@ -107,7 +107,7 @@ export const createWrapper = <S extends Store>(makeStore: MakeStore<S>, config: 
 
         let state = store.getState();
         const isServer = getIsServer();
-        if (context.ctx.err && !isServer) {
+        if (!isServer && context.ctx.err) {
             try {
                 const nextDataScript = document.getElementById(NEXT_DATA_SCRIPT_ID);
                 const ssrData = JSON.parse(nextDataScript?.innerHTML || '{}');
