@@ -30,6 +30,8 @@ import {useRouter} from 'next/router';
 
 export const HYDRATE = '__NEXT_REDUX_WRAPPER_HYDRATE__';
 
+const NEXT_DATA_SCRIPT_ID = '__NEXT_DATA__';
+
 const getIsServer = () => typeof window === 'undefined';
 
 const getDeserializedState = <S extends Store>(initialState: any, {deserializeState}: Config<S> = {}) =>
@@ -103,11 +105,25 @@ export const createWrapper = <S extends Store>(makeStore: MakeStore<S>, config: 
             console.log(`3. getProps after dispatches has store state`, store.getState());
         }
 
-        const state = store.getState();
+        let state = store.getState();
+        const isServer = getIsServer();
+        if (context.ctx.err && !isServer) {
+            try {
+                const nextDataScript = document.getElementById(NEXT_DATA_SCRIPT_ID);
+                const ssrData = JSON.parse(nextDataScript?.innerHTML || '{}');
+                const ssrDataInitialState = ssrData?.props?.initialState || {};
+                if (config.debug) {
+                    console.log(`ssr error, get next data initital state`, ssrDataInitialState);
+                }
+                state = {...state, ...ssrDataInitialState};
+            } catch(e) {
+                console.error(e);
+            }
+        }
 
         return {
             initialProps,
-            initialState: getIsServer() ? getSerializedState<S>(state, config) : state,
+            initialState: isServer ? getSerializedState<S>(state, config) : state,
         };
     };
 
