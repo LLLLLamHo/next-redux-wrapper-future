@@ -112,9 +112,9 @@ export const createWrapper = <S extends Store>(makeStore: MakeStore<S>, config: 
                 const nextDataScript = document.getElementById(NEXT_DATA_SCRIPT_ID);
                 const ssrData = JSON.parse(nextDataScript?.innerHTML || '{}');
                 const ssrDataInitialState = ssrData?.props?.initialState || {};
-
-                if (config.nonce) {
-                    nextDataScript?.setAttribute('nonce', config.nonce);
+                const nonce = context?.req?.headers['x-nonce'];
+                if (nonce) {
+                    nextDataScript?.setAttribute('nonce', nonce);
                 }
 
                 if (config.debug) {
@@ -331,7 +331,6 @@ export interface Config<S extends Store> {
     serializeState?: (state: ReturnType<S['getState']>) => any;
     deserializeState?: (state: any) => ReturnType<S['getState']>;
     debug?: boolean;
-    nonce?: string;
 }
 
 export interface WrapperProps {
