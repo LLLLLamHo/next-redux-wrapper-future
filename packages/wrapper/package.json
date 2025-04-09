@@ -1,6 +1,6 @@
 {
   "name": "next-redux-wrapper-future",
-  "version": "1.2.0",
+  "version": "1.2.3",
   "description": "Redux wrapper for Next.js",
   "main": "lib/index.js",
   "module": "es6/index.js",
@@ -30,7 +30,7 @@
     "concurrently": "6.4.0",
     "jest": "27.4.3",
     "next": "^14.0.2",
-    "next-redux-wrapper-future-configs": "^1.2.0",
+    "next-redux-wrapper-future-configs": "^1.2.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.7",
@@ -56,5 +56,5 @@
   },
   "homepage": "https://github.com/LLLLLamHo/next-redux-wrapper-future",
   "license": "MIT",
-  "gitHead": "c17952821bed9a49a1401ade8a37c03fdec24391"
+  "gitHead": "b9c111031886c114d7dbf8e828826cc40d9ceff9"
 }
