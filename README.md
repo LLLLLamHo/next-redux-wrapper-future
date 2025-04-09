@@ -94,3 +94,9 @@ import isError from '../lib/is-error'
 - v13.5.0 [router.ts](https://github.com/vercel/next.js/blob/v13.5.0/packages/next/src/client/router.ts#L5)
 - v14.0.2 [router.ts](https://github.com/vercel/next.js/blob/v14.0.2/packages/next/src/client/router.ts#L5)
 
+
+
+# 发布方式
+
+进入packages/wrapper执行npm publish
+
