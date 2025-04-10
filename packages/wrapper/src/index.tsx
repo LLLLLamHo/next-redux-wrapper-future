@@ -112,11 +112,6 @@ export const createWrapper = <S extends Store>(makeStore: MakeStore<S>, config: 
                 const nextDataScript = document.getElementById(NEXT_DATA_SCRIPT_ID);
                 const ssrData = JSON.parse(nextDataScript?.innerHTML || '{}');
                 const ssrDataInitialState = ssrData?.props?.initialState || {};
-                const nonce = context?.req?.headers['x-nonce'];
-                if (nonce) {
-                    nextDataScript?.setAttribute('nonce', nonce);
-                }
-
                 if (config.debug) {
                     console.log(`ssr error, get next data initital state`, ssrDataInitialState);
                 }
