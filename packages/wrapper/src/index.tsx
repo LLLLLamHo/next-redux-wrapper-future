@@ -11,7 +11,12 @@ import {
     NextPageContext,
 } from 'next';
 // import {usePathname, useSearchParams, useRouter} from 'next/navigation';
-import {useRouter} from 'next/router';
+import {useRouter} from 'next/compat/router';
+/**
+ * Make sure useRouter not throw error
+ * https://nextjs.org/docs/messages/next-router-not-mounted
+ */
+
 /**
  * Quick note on Next.js return types:
  *
@@ -193,8 +198,16 @@ export const createWrapper = <S extends Store>(makeStore: MakeStore<S>, config: 
     };
 
     const useHybridHydrate = (store: S, giapState: any, gspState: any, gsspState: any, gippState: any) => {
-        const {events} = useRouter();
+        // Make sure useRouter not throw error
+        // import {useRouter} from 'next/compat/router';
+        // https://nextjs.org/docs/messages/next-router-not-mounted
+        const router = useRouter();
         const shouldHydrate = useRef(true);
+
+        let events = null;
+        if (router) {
+            events = router?.events;
+        }
 
         // We should only hydrate when the router has changed routes
         useEffect(() => {
